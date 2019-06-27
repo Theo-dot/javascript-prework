@@ -1,0 +1,60 @@
+/* Global */
+
+$primary-font: "Roboto", sans-serif;
+$color-grey: #dadde3;
+$color-blue: #4e83ed;
+$color-white: #ffffff;
+$background-color: $color-grey;
+$button-color: $color-blue;
+$font-color: $color-white;
+$transition: all 1s;
+$btn-anim: linear-gradient(45deg, $font-color 50%, transparent 50%);
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 50px 0;
+  background: $background-color;
+  text-align: center;
+  height: 300px;
+  font-family: $primary-font;
+}
+
+#buttons {
+  text-align: center;
+}
+
+#button-rock,
+#button-paper,
+#button-scissors {
+  color: $font-color;
+  background: $button-color;
+  display: inline-block;
+  min-width: 160px;
+  margin: 24px auto 0 auto;
+  padding: 16px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-width: 2px;
+  border-style: solid;
+  background-position: 100% 0;
+  background-size: 300%;
+  &:hover {
+    background-position: 0 100%;
+    color: $button-color;
+    transition: $transition;
+    background-image: $btn-anim;
+  }
+}
+
+#messages {
+  padding: 50px 0;
+}
